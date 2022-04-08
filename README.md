@@ -20,5 +20,6 @@ pip install django
 python manage.py runserver
 ```
 注意请在虚拟环境下开启。
+然后打开浏览器，在搜索框输入 http://localhost:8000 （Django默认使用8000端口）
 
 
