@@ -11,6 +11,10 @@ python -m venv ll_env
 ```
 ll_env\Scripts\activate
 ```
+### 下载Django（请在虚拟环境下）
+```
+pip install django
+```
 ### 开启服务器
 ```
 python manage.py runserver
