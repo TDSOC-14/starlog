@@ -1,13 +1,16 @@
 {% extends "star_logs/base.html" %}
 
 {% block content %}
+  
   <h1>话题</h1>
 
   <ul>
-    {% for topic in tpoics %}
-      <li>{{topic}}</li>
+    {% for topic in topics %}
+      <li>
+        <a href="{% url 'star_logs:topic' topic.id %}">{{ topic }}</a>
+      </li>
     {% empty %} 
       <p>没有主题被添加。</p>
     {% endfor %}
   </ul>
-{% endblock content %} 
+  {% endblock content %} 

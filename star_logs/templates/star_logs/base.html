@@ -1,8 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <p>
-        <a href="">星笔记</a> -
-        <a href="topics">话题</a>
-    </p>
-    {% block content %}{% endblock content %}
-</html>
+<p>
+    <a href="{% url 'star_logs:index' %}">星笔记</a> -
+    <a href="{% url 'star_logs:topics' %}">话题</a>
+</p>
+
+
+    
+{% block content %}{% endblock content %}
+<p>
+    POWERED BY <a href="https://djangoproject.com">django</a>
+</p>

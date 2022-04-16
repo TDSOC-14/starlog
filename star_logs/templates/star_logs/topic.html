@@ -1,0 +1,21 @@
+{% entends 'star_logs/base.html'}
+
+{% block content %}
+    <p>主题：{{ topic }}</p>
+
+    <p>内容：</p>
+    <ul>
+    {% for entry in entries %}
+        <li>
+        <p>
+        {{ entry.date_added|date:'Y M d,H:i'}}
+        </p>
+        <p>
+        {{entry.text|linebrakes}}
+        </p>
+    {% empty %}
+        没有内容被添加。
+        </li>
+    </ul>
+
+{% endblock content %}
