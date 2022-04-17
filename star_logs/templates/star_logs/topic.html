@@ -1,9 +1,9 @@
-{% entends 'star_logs/base.html'}
+{% extends 'star_logs/base.html' %}
 
 {% block content %}
     <p>主题：{{ topic }}</p>
 
-    <p>内容：</p>
+    <p>全部：</p>
     <ul>
     {% for entry in entries %}
         <li>
@@ -11,11 +11,12 @@
         {{ entry.date_added|date:'Y M d,H:i'}}
         </p>
         <p>
-        {{entry.text|linebrakes}}
+        {{entry.text|linebreaks}}
         </p>
     {% empty %}
         没有内容被添加。
         </li>
+    {% endfor %}
     </ul>
 
 {% endblock content %}
